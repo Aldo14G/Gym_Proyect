@@ -1,0 +1,4 @@
+CREATE INDEX idx_cliente_activo ON clientes(activo);
+CREATE INDEX idx_membresia_fecha ON pagos_membresia(id_cliente, fecha_vencimiento);
+CREATE INDEX idx_accesos_cliente_fecha ON accesos(id_cliente, fecha);
+CREATE INDEX idx_ventas_fecha ON ventas(fecha_venta);
