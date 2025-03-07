@@ -1,0 +1,10 @@
+CREATE TABLE productos (
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    id_categoria INT NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(6, 2) NOT NULL,
+    costo DECIMAL(6, 2) NOT NULL,
+    stock INT NOT NULL DEFAULT 0,
+    activo BOOLEAN DEFAULT TRUE,
+    FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria) ON DELETE RESTRICT
+);
