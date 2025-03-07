@@ -1,0 +1,9 @@
+CREATE TABLE clientes (
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL, -- Combinando nombre y apellidos
+    telefono VARCHAR(15) NOT NULL, -- Campo obligatorio
+    email VARCHAR(100),
+    fecha_registro DATE NOT NULL DEFAULT CURRENT_DATE,
+    activo BOOLEAN DEFAULT TRUE,
+    notas TEXT
+);
