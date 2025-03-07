@@ -1,0 +1,12 @@
+CREATE TABLE pagos_membresia (
+    id_pago INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT NOT NULL,
+    id_membresia INT NOT NULL,
+    fecha_pago DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_inicio DATE NOT NULL DEFAULT CURRENT_DATE,
+    fecha_vencimiento DATE NOT NULL,
+    monto DECIMAL(6, 2) NOT NULL,
+    metodo_pago ENUM('Efectivo', 'Tarjeta', 'Transferencia') NOT NULL DEFAULT 'Efectivo',
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente) ON DELETE CASCADE,
+    FOREIGN KEY (id_membresia) REFERENCES membresias(id_membresia) ON DELETE RESTRICT
+);
