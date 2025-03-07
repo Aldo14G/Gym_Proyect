@@ -1,0 +1,6 @@
+CREATE TABLE membresias (
+    id_membresia INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(20) NOT NULL,
+    duracion_dias INT NOT NULL,
+    precio DECIMAL(6, 2) NOT NULL
+);
